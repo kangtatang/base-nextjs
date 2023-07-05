@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Halaman Utama</title>
+        <title>Dashboard</title>
       </Head>
       <Navbar />
       <div className="container-fluid">
@@ -35,11 +35,14 @@ export default function Home() {
             className="col-md-9 ms-sm-auto col-lg-10 px-md-4 bg-light"
             style={{ minHeight: contentHeight }}
           >
-            <h1>Selamat datang di halaman utama</h1>
+            <h1>Hallo</h1>
             <p>
-              Ini adalah halaman utama dengan layout admin menggunakan Bootstrap
-              CSS.
+              Aplikasi ini merupakan aplikasi sederhana sebagai bahan
+              pembelajaran, acuan dasar bagi pemula untuk mempelajari aplikasi
+              react JS. silahkan dipergunakan sebagaimana mestinya.
             </p>
+            <p>Dibuat oleh: kangtatang (https://github.com/kangtatang)</p>
+            <p>Library tambahan: axios, bootstrap, react-bootstrap</p>
           </main>
         </div>
       </div>
