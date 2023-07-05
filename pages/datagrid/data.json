@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "nama": "John Doe",
+    "jabatan": "Manager",
+    "email": "john@example.com",
+    "alamat": "Jl. Contoh No. 123",
+    "keterangan": "Lorem ipsum dolor sit amet."
+  },
+  {
+    "id": 2,
+    "nama": "Jane Smith",
+    "jabatan": "Staff",
+    "email": "jane@example.com",
+    "alamat": "Jl. Contoh No. 456",
+    "keterangan": "Lorem ipsum dolor sit amet."
+  },
+  {
+    "id": 3,
+    "nama": "Michael Johnson",
+    "jabatan": "Supervisor",
+    "email": "michael@example.com",
+    "alamat": "Jl. Contoh No. 789",
+    "keterangan": "Lorem ipsum dolor sit amet."
+  },
+  {
+    "id": 4,
+    "nama": "Emily Davis",
+    "jabatan": "Staff",
+    "email": "emily@example.com",
+    "alamat": "Jl. Contoh No. 012",
+    "keterangan": "Lorem ipsum dolor sit amet."
+  },
+  {
+    "id": 5,
+    "nama": "David Wilson",
+    "jabatan": "Manager",
+    "email": "david@example.com",
+    "alamat": "Jl. Contoh No. 345",
+    "keterangan": "Lorem ipsum dolor sit amet."
+  },
+  {
+    "id": 6,
+    "nama": "Sarah Taylor",
+    "jabatan": "Staff",
+    "email": "sarah@example.com",
+    "alamat": "Jl. Contoh No. 678",
+    "keterangan": "Lorem ipsum dolor sit amet."
+  },
+  {
+    "id": 7,
+    "nama": "Robert Anderson",
+    "jabatan": "Supervisor",
+    "email": "robert@example.com",
+    "alamat": "Jl. Contoh No. 901",
+    "keterangan": "Lorem ipsum dolor sit amet."
+  },
+  {
+    "id": 8,
+    "nama": "Olivia Brown",
+    "jabatan": "Staff",
+    "email": "olivia@example.com",
+    "alamat": "Jl. Contoh No. 234",
+    "keterangan": "Lorem ipsum dolor sit amet."
+  },
+  {
+    "id": 9,
+    "nama": "William Martinez",
+    "jabatan": "Manager",
+    "email": "william@example.com",
+    "alamat": "Jl. Contoh No. 567",
+    "keterangan": "Lorem ipsum dolor sit amet."
+  },
+  {
+    "id": 10,
+    "nama": "Sophia Thomas",
+    "jabatan": "Staff",
+    "email": "sophia@example.com",
+    "alamat": "Jl. Contoh No. 890",
+    "keterangan": "Lorem ipsum dolor sit amet."
+  },
+  {
+    "id": 11,
+    "nama": "Daniel Clark",
+    "jabatan": "Supervisor",
+    "email": "daniel@example.com",
+    "alamat": "Jl. Contoh No. 123",
+    "keterangan": "Lorem ipsum dolor sit amet."
+  },
+  {
+    "id": 12,
+    "nama": "Ava Rodriguez",
+    "jabatan": "Staff",
+    "email": "ava@example.com",
+    "alamat": "Jl. Contoh No. 456",
+    "keterangan": "Lorem ipsum dolor sit amet."
+  }
+]

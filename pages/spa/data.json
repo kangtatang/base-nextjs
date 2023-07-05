@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Judul Satu",
+    "gbr": "https://images.pexels.com/photos/2041627/pexels-photo-2041627.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "konten": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in orci auctor, porttitor magna fringilla, finibus magna. Maecenas in libero scelerisque ipsum vehicula eleifend non nec nisi. Curabitur ac quam pellentesque, congue risus a, laoreet dolor. Ut massa quam, scelerisque vitae pretium eu, bibendum vel quam. Morbi sit amet rhoncus nulla. Cras maximus enim in tortor maximus, nec laoreet velit molestie. Sed eget vestibulum ipsum. Vestibulum volutpat elit et sagittis consectetur. Vivamus maximus sed massa ac rutrum. Fusce sodales, justo non condimentum faucibus, libero orci maximus sem, eu pulvinar dui tortor nec lectus. Morbi ultrices pellentesque sapien et rutrum. Fusce a neque erat. "
+  },
+  {
+    "id": 2,
+    "title": "Judul Dua",
+    "gbr": "https://images.pexels.com/photos/1181562/pexels-photo-1181562.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "konten": "Vestibulum in imperdiet nibh, eget vulputate magna. Suspendisse lacinia urna non tellus malesuada, vel mattis dolor egestas. Vivamus massa nibh, lacinia vitae finibus quis, euismod a tortor. In ultrices enim nibh, non vestibulum nisi sagittis a. Pellentesque at vulputate nibh. Sed sit amet magna vel dui hendrerit aliquam. Aliquam efficitur dolor dolor, vel ullamcorper lorem pretium id. Etiam sit amet finibus ligula, eu pretium nulla."
+  },
+  {
+    "id": 3,
+    "title": "Judul Tiga",
+    "gbr": "https://images.pexels.com/photos/3184589/pexels-photo-3184589.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "konten": "Pellentesque cursus turpis sit amet semper lacinia. Nulla venenatis neque nec commodo tempor. Curabitur sit amet enim pharetra, congue dui id, porta massa. Nam nunc odio, cursus nec congue a, sollicitudin ut ipsum. Sed lacinia eros non ligula aliquam sodales. Phasellus consequat dictum odio non aliquet. Suspendisse feugiat tincidunt magna, vitae accumsan quam mattis at. Proin vehicula urna eget enim ornare cursus. Etiam et mattis ante, ac sodales odio. Mauris eleifend velit eget tellus aliquet, a accumsan ligula volutpat. Proin efficitur viverra augue, eget placerat nibh."
+  }
+]
