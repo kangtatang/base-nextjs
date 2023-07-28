@@ -35,6 +35,16 @@ const Sidebar = () => {
               <span>Post From API</span>
             </Link>
           </li>
+          <li className="nav-item">
+            <Link href="/select" className="nav-link">
+              <span>multi Select</span>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link href="/select/car" className="nav-link">
+              <span>Filter By Select</span>
+            </Link>
+          </li>
           {/* Tambahkan menu lainnya di sini */}
         </ul>
       </div>

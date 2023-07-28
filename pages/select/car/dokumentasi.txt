@@ -1,0 +1,116 @@
+Berikut adalah penjelasan dari setiap baris kode yang telah kita buat:
+
+1. `const sortedCarYear = carData.slice().sort((a, b) => a.car_model_year - b.car_model_year);`
+   - Baris ini mengambil salinan dari data mobil (`carData`) dan mengurutkannya berdasarkan tahun model mobil (`car_model_year`) secara ascending.
+
+2. `const sortedYear = sortedCarYear.filter((car, index, array) => index === array.findIndex((c) => c.car_model_year === car.car_model_year));`
+   - Baris ini mengambil data unik dari tahun model mobil (`car_model_year`) dari data yang sudah diurutkan sebelumnya (`sortedCarYear`).
+
+3. `const [carModelFilter, setCarModelFilter] = useState("");`
+   - Baris ini mendeklarasikan state `carModelFilter` dan fungsi `setCarModelFilter` untuk menyimpan nilai filter model mobil yang digunakan.
+
+4. `const [carModelYearFilter, setCarModelYearFilter] = useState("");`
+   - Baris ini mendeklarasikan state `carModelYearFilter` dan fungsi `setCarModelYearFilter` untuk menyimpan nilai filter tahun model mobil yang digunakan.
+
+5. `const handleCarModelFilterChange = (e) => { setCarModelFilter(e.target.value); };`
+   - Baris ini mendefinisikan fungsi `handleCarModelFilterChange` yang akan dipanggil ketika nilai filter model mobil berubah. Fungsi ini akan mengubah nilai `carModelFilter` sesuai dengan nilai filter yang diinputkan.
+
+6. `const handleCarModelYearFilterChange = (e) => { setCarModelYearFilter(e.target.value); };`
+   - Baris ini mendefinisikan fungsi `handleCarModelYearFilterChange` yang akan dipanggil ketika nilai filter tahun model mobil berubah. Fungsi ini akan mengubah nilai `carModelYearFilter` sesuai dengan nilai filter yang diinputkan.
+
+7. `const sortedCarModel = carData.slice().sort((a, b) => a.car_model.localeCompare(b.car_model));`
+   - Baris ini mengambil salinan dari data mobil (`carData`) dan mengurutkannya berdasarkan model mobil (`car_model`) secara ascending.
+
+8. `const sortedModel = sortedCarModel.filter((car, index, array) => index === array.findIndex((c) => c.car_model === car.car_model));`
+   - Baris ini mengambil data unik dari model mobil (`car_model`) dari data yang sudah diurutkan sebelumnya (`sortedCarModel`).
+
+9. `const [itemsPerPage, setItemsPerPage] = useState(5);`
+   - Baris ini mendeklarasikan state `itemsPerPage` dan fungsi `setItemsPerPage` untuk menyimpan jumlah data yang ditampilkan per halaman.
+
+10. `const [currentPage, setCurrentPage] = useState(1);`
+    - Baris ini mendeklarasikan state `currentPage` dan fungsi `setCurrentPage` untuk menyimpan halaman aktif saat ini.
+
+11. `const [totalPages, setTotalPages] = useState(1);`
+    - Baris ini mendeklarasikan state `totalPages` dan fungsi `setTotalPages` untuk menyimpan total halaman yang ada.
+
+12. `const [filteredData, setFilteredData] = useState([]);`
+    - Baris ini mendeklarasikan state `filteredData` dan fungsi `setFilteredData` untuk menyimpan hasil data yang telah difilter berdasarkan model dan tahun model mobil.
+
+13. `const [currentData, setCurrentData] = useState([]);`
+    - Baris ini mendeklarasikan state `currentData` dan fungsi `setCurrentData` untuk menyimpan data yang akan ditampilkan pada halaman aktif saat ini.
+
+14. `useEffect(() => { ... }, [carModelFilter, carModelYearFilter, itemsPerPage]);`
+    - Baris ini mengatur efek samping (side effect) yang akan dijalankan setiap kali terjadi perubahan pada nilai `carModelFilter`, `carModelYearFilter`, atau `itemsPerPage`. Efek samping ini digunakan untuk melakukan filtering data dan menghitung total halaman (`totalPages`) berdasarkan filter dan jumlah data per halaman yang dipilih.
+
+15. `useEffect(() => { ... }, [currentPage, itemsPerPage, filteredData]);`
+    - Baris ini mengatur efek samping (side effect) yang akan dijalankan setiap kali terjadi perubahan pada nilai `currentPage`, `itemsPerPage`, atau `filteredData`. Efek samping ini digunakan untuk mengatur data yang akan ditampilkan pada halaman aktif saat ini (`currentData`) berdasarkan data yang sudah difilter.
+
+16. `const handleItemsPerPageChange = (e) => { ... };`
+    - Baris ini mendefinisikan fungsi `handleItemsPerPageChange` yang akan dipanggil ketika nilai jumlah data per halaman (`itemsPerPage`) berubah. Fungsi ini akan mengubah nilai `itemsPerPage` sesuai dengan pilihan jumlah data per halaman yang diinputkan. Selain itu, fungsi ini juga akan mereset halaman aktif (`currentPage`) kembali ke halaman pertama agar data yang ditampilkan sesuai dengan jumlah data per halaman yang baru dipilih.
+
+17. `const [sortColumn, setSortColumn] = useState(null);`
+    - Baris ini mendeklarasikan state `sortColumn` dan fungsi `setSortColumn` untuk menyimpan kolom yang akan diurutkan pada tabel.
+
+18. `const [sortDirection, setSortDirection] = useState("asc");`
+    - Baris ini mendeklarasikan state `sortDirection` dan fungsi `setSortDirection` untuk menyimpan arah pengurutan (ascending atau descending) pada tabel.
+
+19. `const [sortedFilteredData, setSortedFilteredData] = useState([]);`
+    - Baris ini mendeklarasikan state `sortedFilteredData` dan fungsi `setSortedFilteredData` untuk menyimpan hasil data yang telah difilter dan diurutkan berdasarkan kolom dan arah pengurutan yang dipilih.
+
+20. `const handleSort = (column) => { ... };`
+    - Baris ini mendefinisikan fungsi `handleSort` yang akan dipanggil ketika tombol kolom pada tabel di-klik. Fungsi ini akan mengatur kolom yang akan diurutkan (`sortColumn`) dan arah pengurutan (`sortDirection`) berdasarkan kolom yang dipilih. Jika kolom yang dipilih sudah sedang diurutkan, fungsi ini akan mengubah arah pengurutan menjadi sebaliknya (toggle). Jika kolom yang baru di-klik, fungsi ini akan mengurutkan data secara ascending dan mengubah arah pengurutan menjadi "asc".
+
+21. `useEffect(() => { ... }, [carModelFilter, carModelYearFilter, sortColumn, sortDirection, itemsPerPage]);`
+    - Baris ini mengatur efek samping (side effect) yang akan dijalankan setiap kali terjadi perubahan pada nilai `carModelFilter`, `carModelYearFilter`, `sortColumn`, `sortDirection`, atau `itemsPerPage`. Efek samping ini digunakan untuk melakukan filtering data dan mengurutkan data (`sortedFilteredData`) berdasarkan kolom dan arah pengurutan yang dipilih.
+
+22. `useEffect(() => { ... }, [currentPage, itemsPerPage, sortedFilteredData]);`
+    - Baris ini mengatur efek samping (side effect) yang akan dijalankan setiap kali terjadi perubahan pada nilai `currentPage`, `itemsPerPage`, atau `sortedFilteredData`. Efek samping ini digunakan untuk mengatur data yang akan ditampilkan pada halaman aktif saat ini (`currentData`) berdasarkan data yang sudah difilter dan diurutkan.
+
+23. `const handlePageChange = (pageNumber) => { ... };`
+    - Baris ini mendefinisikan fungsi `handlePageChange` yang akan dipanggil ketika tombol "Previous" atau "Next" pada halaman aktif saat ini di-klik. Fungsi ini akan mengubah nilai `currentPage` menjadi halaman yang baru dipilih jika halaman yang dipilih berada dalam rentang halaman yang valid (dari 1 hingga `totalPages`). Selain itu, fungsi ini juga akan mengatur data yang akan ditampilkan pada halaman aktif saat ini (`currentData`) berdasarkan data yang sudah difilter dan diurutkan.
+
+Dengan demikian, seluruh kode di atas digunakan untuk mengatur filter, pengurutan, dan tampilan data mobil pada halaman web. Data mobil dapat difilter berdasarkan model dan tahun model, diurutkan berdasarkan kolom yang dipilih (model, tahun model, atau merk mobil), serta ditampilkan dalam jumlah data per halaman yang dapat diatur. Tombol navigasi "Previous" dan "Next" juga memungkinkan pengguna untuk berpindah ke halaman data yang berbeda. Semoga penjelasan ini membantu!
+
+=========
+
+Urutan variabel dan fungsi dalam kode telah sesuai dan tidak perlu diperbaiki. Kode tersebut telah diorganisir dengan baik. Berikut adalah urutan variabel dan fungsi dalam kode:
+
+1. Import library dan komponen:
+   - `useEffect` dan `useState` dari "react"
+   - "bootstrap/dist/css/bootstrap.min.css"
+   - `Head` dari "next/head"
+   - `Navbar` dari "../../../components/Navbar"
+   - `Sidebar` dari "../../../components/Sidebar"
+   - `Footer` dari "../../../components/Footer"
+   - `carData` dari "./car.json"
+
+2. Deklarasi dan pengaturan state:
+   - `const [contentHeight, setContentHeight] = useState(0);`
+   - `const [carModelFilter, setCarModelFilter] = useState("");`
+   - `const [carModelYearFilter, setCarModelYearFilter] = useState("");`
+   - `const [itemsPerPage, setItemsPerPage] = useState(5);`
+   - `const [currentPage, setCurrentPage] = useState(1);`
+   - `const [totalPages, setTotalPages] = useState(1);`
+   - `const [filteredData, setFilteredData] = useState([]);`
+   - `const [currentData, setCurrentData] = useState([]);`
+   - `const [sortColumn, setSortColumn] = useState(null);`
+   - `const [sortDirection, setSortDirection] = useState("asc");`
+   - `const [sortedFilteredData, setSortedFilteredData] = useState([]);`
+
+3. Efek samping (side effects) menggunakan `useEffect`:
+   - Mengatur tinggi konten halaman (`contentHeight`) saat ukuran layar berubah.
+   - Melakukan filtering data berdasarkan model dan tahun model.
+   - Menghitung total halaman (`totalPages`) berdasarkan jumlah data dan data per halaman (`itemsPerPage`).
+   - Mereset halaman aktif (`currentPage`) ketika terjadi perubahan pada data atau data per halaman.
+
+4. Fungsi-fungsi:
+   - `handleCarModelFilterChange`: Mengubah nilai `carModelFilter` berdasarkan pilihan model mobil yang dipilih oleh pengguna.
+   - `handleCarModelYearFilterChange`: Mengubah nilai `carModelYearFilter` berdasarkan pilihan tahun mobil yang dipilih oleh pengguna.
+   - `handleItemsPerPageChange`: Mengubah nilai `itemsPerPage` berdasarkan pilihan jumlah data per halaman yang dipilih oleh pengguna. Juga mereset halaman aktif (`currentPage`) kembali ke halaman pertama ketika data per halaman berubah.
+   - `handleSort`: Mengatur kolom yang akan diurutkan (`sortColumn`) dan arah pengurutan (`sortDirection`) berdasarkan kolom yang dipilih oleh pengguna. Jika kolom yang sama di-klik lagi, maka akan mengubah arah pengurutan menjadi sebaliknya (toggle).
+   - `handlePageChange`: Mengubah nilai `currentPage` berdasarkan halaman yang dipilih oleh pengguna menggunakan tombol "Previous" atau "Next".
+
+5. Render halaman:
+   - Menampilkan elemen-elemen HTML dan antarmuka pengguna yang sesuai dengan fungsi dan state yang telah didefinisikan.
+
+Urutan variabel dan fungsi dalam kode sudah sesuai dan sudah diorganisir dengan baik untuk mempermudah pemahaman dan pengelolaan kode.
