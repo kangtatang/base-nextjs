@@ -1,4 +1,5 @@
 // import React, { useState } from "react";
+"use client";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
