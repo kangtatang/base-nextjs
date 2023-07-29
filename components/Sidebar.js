@@ -26,6 +26,11 @@ const Sidebar = () => {
             </Link>
           </li>
           <li className="nav-item">
+            <Link href="/modal/notif" className="nav-link">
+              <span>Notif</span>
+            </Link>
+          </li>
+          <li className="nav-item">
             <Link href="/spa" className="nav-link">
               <span>Togle Content</span>
             </Link>
@@ -43,6 +48,16 @@ const Sidebar = () => {
           <li className="nav-item">
             <Link href="/select/car" className="nav-link">
               <span>Filter By Select</span>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link href="/basicform" className="nav-link">
+              <span>Basic Form</span>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link href="/upload" className="nav-link">
+              <span>Upload</span>
             </Link>
           </li>
           {/* Tambahkan menu lainnya di sini */}
