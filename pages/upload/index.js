@@ -7,8 +7,11 @@ import Navbar from "../../components/Navbar";
 import Sidebar from "../../components/Sidebar";
 import Footer from "../../components/Footer";
 import NotificationModal from "../../components/NotificationModal";
+import { config } from "dotenv";
 
 function UploadComponent() {
+  config();
+
   const [contentHeight, setContentHeight] = useState(0);
 
   useEffect(() => {
@@ -76,8 +79,10 @@ function UploadComponent() {
     // Ganti "Example Data" dengan data yang ingin diupload, atau gunakan selectedFile jika Anda ingin mengupload file
     const data = selectedFile;
 
-    // Ganti public_12a1yTwDyryU4bMCLviKZuULR2Df dengan API key yang valid
-    const apiKey = "public_12a1yTwDyryU4bMCLviKZuULR2Df";
+    // config(); // Panggil dan konfigurasi file .env
+
+    // Anda dapat langsung menggunakan variabel lingkungan dari process.env di sini
+    const apiKey = process.env.NEXT_PUBLIC_API_KEY;
 
     // Gunakan fungsi uploadData untuk melakukan proses upload
     uploadData(data, apiKey)
@@ -158,7 +163,6 @@ function UploadComponent() {
               {loading && <div className={styles.loader}></div>}{" "}
               {/* Animasi loading spinner */}
               {uploadStatus && <div>{uploadStatus}</div>}{" "}
-              {/* Pesan status upload */}
             </div>
 
             {/* Modal Pesan Berhasil */}
